@@ -2,7 +2,7 @@
 
 # AppName => FoodShare
 
-# Our Team => Team 2
+# Our Team
 
 1) Sriram Maganti
 
