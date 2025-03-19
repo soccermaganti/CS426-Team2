@@ -2,6 +2,9 @@
 
 # AppName => FoodShare
 
+## UI/UX Guidelines  
+[📄 View UI/UX Guidelines](UX_DESIGN_STYLE_GUIDELINES.md)  
+
 # Our Team
 
 1) Sriram Maganti
