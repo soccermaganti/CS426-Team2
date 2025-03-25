@@ -15,22 +15,22 @@ Template => Fill in Values next week
 
 ## 2. Design Principles  
 ### 2.1 Color Scheme  
-- **Primary Color**: _(e.g., #3498db)_  
-- **Secondary Color**: _(e.g., #2ecc71)_  
-- **Background Color**: _(e.g., #ffffff)_  
-- **Text Color**: _(e.g., #333333)_  
+- **Primary Color**: Dark Green (#006400)
+- **Secondary Color**: Pastel Green (#77DD77)  
+- **Background Color**: Beige (#F5F5DC) 
+- **Text Color**: Black (#000000)
 - **Accent Colors**: _(e.g., #f39c12, #e74c3c)_  
-- **Color Usage Guidelines**: _(e.g., Primary color for buttons, Secondary for links, etc.)_  
+- **Color Usage Guidelines**:_(e.g., Primary color for buttons, Secondary for links, etc.)_  
 
 ### 2.2 Typography  
 - **Primary Font**: _(e.g., "Inter", sans-serif)_  
 - **Secondary Font**: _(e.g., "Roboto", sans-serif)_  
-- **Font Sizes**:  
-  - Heading 1: _(e.g., 32px, bold)_  
-  - Heading 2: _(e.g., 24px, semi-bold)_  
-  - Body Text: _(e.g., 16px, regular)_  
-  - Small Text: _(e.g., 14px, regular)_  
-- **Line Height & Letter Spacing**: _(e.g., 1.5, 0.02em)_  
+- **Font Sizes**:
+  - Heading 1: 30px, bold
+  - Heading 2: 24px, semi-bold
+  - Body Text: 16px, regular  
+  - Small Text: 12px, regular
+- **Line Height & Letter Spacing** 1.5px
 
 ### 2.3 Spacing & Layout  
 - **Grid System**: _(e.g., 12-column, 8px spacing scale)_  
