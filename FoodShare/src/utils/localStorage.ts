@@ -44,7 +44,7 @@ export const saveToLocalStorage = <T>(key: string, data: T): void => {
   };
   
   /**
-   * Clear all data from localStorage
+   * Clear all data from localStorages
    */
   export const clearLocalStorage = (): void => {
     try {
