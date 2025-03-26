@@ -1,7 +1,5 @@
 # UI/UX Design and Style Guidelines  
 
-Template => Fill in Values next week
-
 ## 1. Introduction  
 **Purpose**: This document defines the design standards for our UI components to ensure consistency, usability, and accessibility.  
 
@@ -19,7 +17,7 @@ Template => Fill in Values next week
 - **Secondary Color**: Pastel Green (#77DD77)  
 - **Background Color**: Beige (#F5F5DC) 
 - **Text Color**: Black (#000000)
-- **Accent Colors**: _(e.g., #f39c12, #e74c3c)_  
+- **Accent Colors**: _(e.g., #f39c12 - light orange, #e74c3c - pastel red)_  
 - **Color Usage Guidelines**:_(e.g., Primary color for buttons, Secondary for links, etc.)_  
 
 ### 2.2 Typography  
