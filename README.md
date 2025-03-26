@@ -23,7 +23,7 @@ Email: jngooi@umass.edu
 
 3) Arvind Udayabanu
 
-Background:
+Background:  
 I have a background in web development as a full-stack application developer as well as knowledge in deploying highly available and scalable web applications using AWS. I am interested in coming up with innovative ideas and applying them to applications that everyone can use and benefit from.
 
 Email: audayabanu@umass.edu 
