@@ -1,5 +1,5 @@
 import React, { useState, ChangeEvent } from 'react';
-import { Tabs, Card, Button, Input, Select, Table, Badge } from 'react-daisyui';
+import {Card, Button, Input, Select, Table, Badge } from 'react-daisyui';
 
 // Mock data for demonstration
 const mockRestaurants = [
@@ -36,30 +36,33 @@ const UserDashboard: React.FC = () => {
     return (
         <div className="p-4 w-full max-w-8xl mx-auto">
             <h1 className="text-2xl font-bold mb-6">FoodShare Dashboard</h1>
-            
-            <Tabs className="mb-6">
-                <Tabs.Tab 
-                    onClick={() => setActiveTab("available")} 
-                    active={activeTab === "available"} 
-                    className="tab-bordered"
+
+            <div className="mb-6 flex space-x-4 border-b">
+                <button
+                    onClick={() => setActiveTab("available")}
+                    className={`px-4 py-2 font-medium ${
+                        activeTab === "available" ? "border-b-2 border-blue-500 text-blue-500" : "text-gray-500"
+                    }`}
                 >
                     Available Food
-                </Tabs.Tab>
-                <Tabs.Tab 
-                    onClick={() => setActiveTab("providers")} 
-                    active={activeTab === "providers"} 
-                    className="tab-bordered"
+                </button>
+                <button
+                    onClick={() => setActiveTab("providers")}
+                    className={`px-4 py-2 font-medium ${
+                        activeTab === "providers" ? "border-b-2 border-blue-500 text-blue-500" : "text-gray-500"
+                    }`}
                 >
                     Providers
-                </Tabs.Tab>
-                <Tabs.Tab 
-                    onClick={() => setActiveTab("requests")} 
-                    active={activeTab === "requests"} 
-                    className="tab-bordered"
+                </button>
+                <button
+                    onClick={() => setActiveTab("requests")}
+                    className={`px-4 py-2 font-medium ${
+                        activeTab === "requests" ? "border-b-2 border-blue-500 text-blue-500" : "text-gray-500"
+                    }`}
                 >
                     My Requests
-                </Tabs.Tab>
-            </Tabs>
+                </button>
+            </div>
             
             {activeTab === "available" && (
                 <div>
