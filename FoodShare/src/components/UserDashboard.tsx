@@ -35,7 +35,7 @@ const UserDashboard: React.FC = () => {
     
     return (
         <div className="p-4 w-full max-w-8xl mx-auto">
-            <h1 className="text-2xl font-bold mb-6">FoodShare Dashboard</h1>
+            <h1 className="text-2xl font-bold mb-6">User Dashboard</h1>
 
             <div className="mb-6 flex space-x-4 border-b">
                 <button
