@@ -34,7 +34,7 @@ const UserDashboard: React.FC = () => {
     const categories = [...new Set(mockFoodItems.map(item => item.category))];
     
     return (
-        <div className="p-4 w-full max-w-6xl mx-auto">
+        <div className="p-4 w-full max-w-8xl mx-auto">
             <h1 className="text-2xl font-bold mb-6">FoodShare Dashboard</h1>
             
             <Tabs className="mb-6">
