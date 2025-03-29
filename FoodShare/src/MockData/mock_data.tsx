@@ -1,6 +1,6 @@
 import { Coordinate, Place, PlaceDist, addPlaces, distFilter } from "../utils/distFilterFunctions.ts";
 import { loadFromLocalStorage, removeFromLocalStorage } from "../utils/localStorage.ts";
-import { LabeledInput  } from "../components/labeled_input.tsx";
+import { LabeledInput  } from "./labeled_input.tsx";
 import { useState } from "react";
 
 const mock_data_r: Place[] = [
