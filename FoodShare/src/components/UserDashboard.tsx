@@ -34,14 +34,14 @@ const UserDashboard: React.FC = () => {
     const categories = [...new Set(mockFoodItems.map(item => item.category))];
     
     return (
-        <div className="p-4 w-full max-w-8xl mx-auto">
+        <div className="bg-green-200 p-4 w-full max-w-8xl mx-auto text-black">
             <h1 className="text-2xl font-bold mb-6">User Dashboard</h1>
 
             <div className="mb-6 flex space-x-4 border-b">
                 <button
                     onClick={() => setActiveTab("available")}
                     className={`px-4 py-2 font-medium ${
-                        activeTab === "available" ? "border-b-2 border-blue-500 text-blue-500" : "text-gray-500"
+                        activeTab === "available" ? "border-b-2 border-blue-500 text-black" : "text-green"
                     }`}
                 >
                     Available Food
@@ -49,7 +49,7 @@ const UserDashboard: React.FC = () => {
                 <button
                     onClick={() => setActiveTab("providers")}
                     className={`px-4 py-2 font-medium ${
-                        activeTab === "providers" ? "border-b-2 border-blue-500 text-blue-500" : "text-gray-500"
+                        activeTab === "providers" ? "border-b-2 border-blue-500 text-black" : "text-green"
                     }`}
                 >
                     Providers
@@ -57,7 +57,7 @@ const UserDashboard: React.FC = () => {
                 <button
                     onClick={() => setActiveTab("requests")}
                     className={`px-4 py-2 font-medium ${
-                        activeTab === "requests" ? "border-b-2 border-blue-500 text-blue-500" : "text-gray-500"
+                        activeTab === "requests" ? "border-b-2 border-blue-500 text-black" : "text-green"
                     }`}
                 >
                     My Requests
@@ -71,12 +71,12 @@ const UserDashboard: React.FC = () => {
                             placeholder="Search for food items..." 
                             value={searchTerm}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => setSearchTerm(e.target.value)}
-                            className="flex-grow"
+                            className="flex-grow bg-white"
                         />
                         <Select 
                             value={selectedCategory}
                             onChange={(e: ChangeEvent<HTMLSelectElement>) => setSelectedCategory(e.target.value)}
-                            className="w-full md:w-48"
+                            className="w-full md:w-48 text-black bg-white"
                         >
                             <option value="">All Categories</option>
                             {categories.map(category => (
@@ -95,7 +95,7 @@ const UserDashboard: React.FC = () => {
                                     <p>Quantity: {item.quantity} units</p>
                                     <p>Expires in: {item.expires}</p>
                                     <Card.Actions className="justify-end">
-                                        <Button color="primary">Request Item</Button>
+                                        <Button className="bg-green-900 text-white">Request Item</Button>
                                     </Card.Actions>
                                 </Card.Body>
                             </Card>
@@ -110,10 +110,10 @@ const UserDashboard: React.FC = () => {
                     <div className="overflow-x-auto">
                         <Table className="w-full">
                             <Table.Head>
-                                <span>Name</span>
-                                <span>Type</span>
-                                <span>Distance</span>
-                                <span>Actions</span>
+                            <span className="text-black">Name</span>
+                            <span className="text-black">Type</span>
+                            <span className="text-black">Distance</span>
+                            <span className="text-black">Actions</span>
                             </Table.Head>
                             <Table.Body>
                                 {mockRestaurants.map(place => (
@@ -138,11 +138,11 @@ const UserDashboard: React.FC = () => {
                     <div className="overflow-x-auto">
                         <Table className="w-full">
                             <Table.Head>
-                                <span>Request ID</span>
-                                <span>Item</span>
-                                <span>Provider</span>
-                                <span>Date</span>
-                                <span>Status</span>
+                                <span className="text-black">Request ID</span>
+                                <span className="text-black">Item</span>
+                                <span className="text-black">Provider</span>
+                                <span className="text-black">Date</span>
+                                <span className="text-black">Status</span>
                             </Table.Head>
                             <Table.Body>
                                 {mockPastRequests.map(request => (
