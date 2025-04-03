@@ -46,5 +46,4 @@ Solution:
 FoodShare is a platform that connects restaurants, grocery stores, and individuals with surplus food to local shelters and food banks.
 
 # How to Run the Project 
-
-
+npm run start

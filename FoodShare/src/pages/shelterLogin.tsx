@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Login: React.FC = () => {
+const ShelterLogin: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Logging in with:', { email, password });
+    navigate('/Dashboard');
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg w-96">
-        <h2 className="text-2xl font-bold text-center mb-6">Login</h2>
+        <img src="/foodShareLogo.png" alt="FoodShare Logo" className="mx-auto mb-6" />
+        <h2 className="text-2xl font-bold text-center mb-6">Shelter Login</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-gray-700">Email</label>
@@ -41,10 +45,12 @@ const Login: React.FC = () => {
             Login
           </button>
         </form>
-        <p className="text-center text-gray-600 mt-4">Don't have an account? <a href="#" className="text-blue-500 hover:underline">Sign up</a></p>
+        <p className="text-center text-gray-600 mt-4">
+          Don't have an account? <a href="#" className="text-blue-500 hover:underline">Sign up</a>
+        </p>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default ShelterLogin;
