@@ -1,6 +1,6 @@
 import React, { useState, ChangeEvent } from 'react';
 import {Card, Button, Input, Select, Table, Badge } from 'react-daisyui';
-
+import { MockData } from '../MockData/mock_data.tsx';
 // Mock data for demonstration
 const mockRestaurants = [
   { id: 1, name: "Fresh Eats", type: "Restaurant", distance: "0.8 miles" },
@@ -105,31 +105,7 @@ const UserDashboard: React.FC = () => {
             )}
             
             {activeTab === "providers" && (
-                <div>
-                    <h2 className="text-xl font-semibold mb-4">Participating Restaurants & Grocery Stores</h2>
-                    <div className="overflow-x-auto">
-                        <Table className="w-full">
-                            <Table.Head>
-                            <span className="text-black">Name</span>
-                            <span className="text-black">Type</span>
-                            <span className="text-black">Distance</span>
-                            <span className="text-black">Actions</span>
-                            </Table.Head>
-                            <Table.Body>
-                                {mockRestaurants.map(place => (
-                                    <Table.Row key={place.id}>
-                                        <span>{place.name}</span>
-                                        <span>{place.type}</span>
-                                        <span>{place.distance}</span>
-                                        <span>
-                                            <Button size="sm" color="ghost">View Available Food</Button>
-                                        </span>
-                                    </Table.Row>
-                                ))}
-                            </Table.Body>
-                        </Table>
-                    </div>
-                </div>
+                <MockData></MockData>
             )}
             
             {activeTab === "requests" && (

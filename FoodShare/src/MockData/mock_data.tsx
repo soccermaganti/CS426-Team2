@@ -2,6 +2,7 @@ import { Coordinate, Place, PlaceDist, addPlaces, distFilter } from "../utils/di
 import { loadFromLocalStorage, removeFromLocalStorage } from "../utils/localStorage.ts";
 import { LabeledInput  } from "./labeled_input.tsx";
 import { useState } from "react";
+import { Button, Table } from 'react-daisyui';
 
 const mock_data_r: Place[] = [
     { name: "Lili's Restaurant", location: { x: 42.37863, y: -72.51972} }, // Amherst, MA
@@ -76,22 +77,31 @@ const MockData = () => {
     }
 
     return (
-        <div>
-            <h2>Find Nearby Restaurants</h2>
-            <LabeledInput label="Longitude" type="number" placeholder="42.373" value={tempLongitude} setValue={setTempLongitude} />
-            <br />
-
-            <LabeledInput label="Latitude" type="number" placeholder="-72.522" value={tempLatitude} setValue={setTempLatitude} />
-            <br />
+        <div className="p-4 w-full max-w-4xl mx-auto">
+            <h2 className="text-xl font-semibold mb-4">Find Nearby Restaurants</h2>
+            <div className="bg-green-100 p-6 rounded-lg shadow-md">
+                <LabeledInput label="Longitude" type="number" placeholder="42.373" value={tempLongitude} setValue={setTempLongitude} />
+                <LabeledInput label="Latitude" type="number" placeholder="-72.522" value={tempLatitude} setValue={setTempLatitude} />
+                <LabeledInput label="Distance (miles)" type="number" placeholder="5" value={tempDistance} setValue={setTempDistance} />
+                <Button onClick={handleClick} className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition">Find Restaurants</Button>
+            </div>
             
-            <LabeledInput label="Distance (miles)" type="number" placeholder="5" value={tempDistance} setValue={setTempDistance} />
-            <br />
-
-            <button onClick={handleClick}>Find Restaurants</button>
-
-            <h3 id="distanceDiv"></h3>
-            <ul>{filteredRestaurants.map((rd, i) => (<li key={i}>{rd.place.name} - {rd.dist.toFixed(2)} miles away</li>))}</ul>
-
+            <div className="overflow-x-auto mt-6">
+                <Table className="w-full">
+                    <Table.Head>
+                        <span className="text-black">Name</span>
+                        <span className="text-black">Distance (miles)</span>
+                    </Table.Head>
+                    <Table.Body>
+                        {filteredRestaurants.map((rd, i) => (
+                            <Table.Row key={i}>
+                                <span>{rd.place.name}</span>
+                                <span>{rd.dist.toFixed(2)}</span>
+                            </Table.Row>
+                        ))}
+                    </Table.Body>
+                </Table>
+            </div>
         </div>
     )
 }
