@@ -18,7 +18,7 @@ const BusinessDashboard: React.FC = () => {
   const [selectedBusiness, setSelectedBusiness] = useState<string | null>(null);
   
   return (
-    <div className="p-4 w-full max-w-8xl mx-auto">
+    <div className="bg-green-200 rounded-lg p-4 w-full max-w-8xl mx-auto text-black">
       <h1 className="text-2xl font-bold mb-6">Business Dashboard</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
