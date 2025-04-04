@@ -9,7 +9,7 @@ const ShelterLogin: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Logging in with:', { email, password });
-    navigate('/Dashboard');
+    navigate('/user-dashboard');
   };
 
   return (

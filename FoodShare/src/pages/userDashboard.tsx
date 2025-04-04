@@ -1,17 +1,14 @@
 import UserDashboard from '../components/UserDashboard'
-import BusinessDashboard from '../components/BusinessDashboard'
 
-const DashBoard: React.FC = () => {
+const UserDashBoard: React.FC = () => {
     return (
         <div>
             <section className="bg-gray-100 rounded-lg shadow-md p-6 sticky top-6">
             {/* <section> */}
                 <UserDashboard />
             </section>
-            <section className="bg-black rounded-lg shadow-md p-6 sticky top-6">
-                <BusinessDashboard />
-            </section>
         </div>
     )
 }
-export default DashBoard
+
+export default UserDashBoard;
