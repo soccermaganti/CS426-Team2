@@ -23,6 +23,20 @@ const UserDashboard: React.FC = () => {
     const [activeTab, setActiveTab] = useState<string>("available");
     const [searchTerm, setSearchTerm] = useState<string>("");
     const [selectedCategory, setSelectedCategory] = useState<string>("");
+    const [userRequests, setUserRequests] = useState<typeof mockPastRequests>([]);
+
+    const handleRequestItem = (item: typeof mockFoodItems[0]) => {
+        const newRequest = {
+            id: Date.now(), // simple unique ID
+            item: item.name,
+            provider: item.provider,
+            requestDate: new Date().toISOString().split('T')[0], // format: YYYY-MM-DD
+            status: "Pending",
+        };
+        setUserRequests(prev => [...prev, newRequest]);
+        alert(`${item.name} has been requested!`);
+    };
+
     
     const filteredFoodItems = mockFoodItems.filter(item => {
         return (
@@ -95,7 +109,7 @@ const UserDashboard: React.FC = () => {
                                     <p>Quantity: {item.quantity} units</p>
                                     <p>Expires in: {item.expires}</p>
                                     <Card.Actions className="justify-end">
-                                        <Button className="bg-green-900 text-white">Request Item</Button>
+                                        <Button className="bg-green-900 text-white" onClick={() => handleRequestItem(item)}>Request Item</Button>
                                     </Card.Actions>
                                 </Card.Body>
                             </Card>
@@ -121,7 +135,8 @@ const UserDashboard: React.FC = () => {
                                 <span className="text-black">Status</span>
                             </Table.Head>
                             <Table.Body>
-                                {mockPastRequests.map(request => (
+                                {/* {[...mockPastRequests, ...userRequests].map(request => ( */}
+                                {userRequests.map(request => (
                                     <Table.Row key={request.id}>
                                         <span>#{request.id}</span>
                                         <span>{request.item}</span>
