@@ -106,4 +106,4 @@ const MockData = () => {
     )
 }
 
-export { MockData };
+export { MockData, mock_data_r };
